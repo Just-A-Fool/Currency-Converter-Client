@@ -1,25 +1,85 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(88, 102, 91);
+}
+
 main {
     text-align: center;
+}
+
+h1 {
+    color:white;
+}
+
+#error-box {
+    color: rgb(255, 255, 255);
 }
 
 #currency-form {
     display: flex;
     flex-direction: column;
-    width: 50%;
+  
     margin: 0 auto;
+    background-color: rgb(195, 217, 192);
+    padding: 50px;
 }
 
-button, select, input{
-    width: 25%;
+button{
+    width: 75%;
     margin: 10px auto 0;
 }
 
-label {
-    margin-top: 20px;
+input, select {
+    width: 75%;
+    margin: 0 auto 20px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#text-box {
+    background-color: rgb(29, 77, 50);
+    color: white;
+    padding: 5px;
+    margin: 10px auto;
+    
+}
+
+@media screen and (min-width: 600px) {
+    #currency-form {
+        width: 50%;
+    }
+
+    #text-box {
+        width: 50%;
+    }
+
+    button{
+        width: 50%;
+    }
+
+    input, select {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #currency-form {
+        width: 50%;
+    }
+
+    #text-box {
+        width: 25%;
+    }
+
+    button{
+        width: 25%;
+    }
+
+    input, select {
+        width: 25%;
+    }
 }
