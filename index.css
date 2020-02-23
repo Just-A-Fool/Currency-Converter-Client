@@ -1,0 +1,25 @@
+main {
+    text-align: center;
+}
+
+#currency-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+button, select, input{
+    width: 25%;
+    margin: 10px auto 0;
+}
+
+label {
+    margin-top: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
