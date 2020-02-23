@@ -1,6 +1,6 @@
 # Currency-Conversion Server
 
-Live app: 
+Live app: https://just-a-fool.github.io/Currency-Converter-Client/
 
 Server GitHub: https://github.com/Just-A-Fool/Currency-Converter-Server
 
