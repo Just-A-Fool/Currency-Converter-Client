@@ -4,7 +4,7 @@ const submit = (to, from, amount) => {
         base_currency: from,
         base_amount: amount,
         target_currency: to
-    }
+    };
 
     return fetch('https://aedan-currency-converter.herokuapp.com/convert', {
         'method': 'POST',

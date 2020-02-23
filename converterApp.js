@@ -1,5 +1,7 @@
 import api from './converterApi.js';
 
+
+
 const setError = (string) => {
     $('#error-box').html(`<h2>${string}</h2>`);
 };
@@ -8,9 +10,11 @@ const resetError = () => {
     $('#error-box').html('');
 };
 
+//Updates textbox with currency conversion information.
 const updateTextbox = (to, from, base_amount, target_amount) => {
     $('#text-box').html(`<h2>${base_amount} ${from}, is ${target_amount.toFixed(2)} ${to}</h2>`)
 };
+
 
 const renderForm = () => {
     let optionArray = ['USD', 'JPY', 'BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN', 'RON', 'SEK', 'CHF', 'ISK', 'NOK', 'HRK', 'RUB', 'TRY', 'AUD', 'BRL', 'CAD', 'CNY', 'HKD', 'IDR', 'ILS', 'INR', 'KRW', 'MXN', 'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR'];
@@ -47,6 +51,7 @@ const formSwapListener = () => {
     $('#currency-form').on('click', '#swap', e => {
         let form = e.delegateTarget;
 
+        //Swap from one select to the other
         let from = form.from.value;
         form.from.value = form.to.value;
         form.to.value = from;
@@ -65,7 +70,7 @@ const formSubmitListener = () => {
                 .then((data) => {
                     updateTextbox(to, from, amount, data.target_amount);
                     resetError();
-                })
+                });
         } else {
             setError('The amount must be greater than 0.');
         }
